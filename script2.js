@@ -1905,7 +1905,7 @@ function mapFrontendToBackend(frontendPage) {
 function saveWarnaToBackend(warna) {
     var nim = sessionStorage.getItem('nim');  // Mengambil NIM dari sessionStorage
 
-    fetch(`https://a8fb-103-245-26-70.ngrok-free.app/api/save-warna/${nim}`, {
+    fetch(`https://adequate-manatee-absolutely.ngrok-free.app/api/save-warna/${nim}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
