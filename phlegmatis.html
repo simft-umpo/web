@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sanguinis</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="phlegmatis.css">
+</head>
+<body>
+<header>
+  <h1>SimFT</h1>
+</header>
+<h2>Pertanyaan quesioner telah selesai terima kasih</h2>
+<h2>Berikut adalah hasil quesioner</h2>
+
+<div class="profile-container">
+  <img src="" alt="Foto Profil">
+  <h3 id="nama">Nama Pengguna</h3>
+  <h3 id="nim">NIM Pengguna</h3>
+</div>
+
+<div class="phlegmatis">
+  <h4>Anda adalah seorang phlegmatis yang Sabar, ramah, puas</h4>
+</div>
+
+<div class="buttons-container">
+  <div class="buttons">
+    <span class="button-text">Klik button save untuk menyimpan hasil quesioner</span>
+    <button class="button save-buttons" onclick="saveFunction()"><i class="far fa-save"></i>Save</button>
+  </div>
+
+  <div class="buttons">
+    <span class="button-text2">Klik Button Next untuk melanjutkan ke halaman utama</span>
+    <button class="button save-buttons" onclick="nextFunction()"><i class="fas fa-chevron-right"></i>Next</button>
+  </div>
+</div>
+
+<script>
+        function saveFunction() {
+            console.log("Tombol Save ditekan!");
+            // Tambahkan aksi sesuai kebutuhan
+        }
+
+        function nextFunction() {
+            console.log("Tombol Next ditekan!");
+            window.location.href = 'aqua.html';
+        }
+    </script>
+
+<script>
+    // Fungsi untuk mengambil data dari sessionStorage dan mengganti teks pada halaman
+    function fetchDataAndDisplay() {
+      // Mengambil NIM dari sessionStorage
+      var nim = sessionStorage.getItem('nim');
+
+      if (!nim) {
+        // Handle jika NIM tidak ditemukan (misalnya, user belum login)
+        console.error('NIM not found in sessionStorage');
+        return;
+      }
+
+      // Kirim permintaan GET ke backend untuk mendapatkan data berdasarkan nim
+      fetch(`https://a8fb-103-245-26-70.ngrok-free.app/api/get-by-nim/${nim}`)
+            .then(response => {
+              if (!response.ok) {
+                throw new Error("Data not found");
+              }
+              return response.json();
+            })
+            .then(data => {
+              // Ganti teks pada halaman dengan data yang diambil dari backend
+              document.getElementById('nama').innerText = data.nama; // Ganti 'nama' sesuai dengan nama atribut di entitas Mahasiswa
+              document.getElementById('nim').innerText = nim; // Menggunakan nim yang diambil dari sessionStorage
+            })
+            .catch(error => {
+              console.error(error);
+            });
+    }
+
+    // Panggil fungsi untuk mengambil data dan menampilkan saat halaman dimuat
+    document.addEventListener('DOMContentLoaded', fetchDataAndDisplay);
+    </script>
+</body>
+</html>

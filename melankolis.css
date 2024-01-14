@@ -1,0 +1,102 @@
+ body {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     font-family: Arial, sans-serif;
+     margin: 0;
+     height: 800px;
+ }
+
+ header {
+     background-color: blue;
+     padding: 15px;
+     color: black;
+     width: 100%;
+     box-sizing: border-box;
+ }
+
+ h1 {
+     margin: 0;
+ }
+ h2{
+     font-family: Arial, sans-serif;
+     text-align: center;
+     font-size: 24px;
+     margin-top: 5px;
+     margin-bottom: 0px;
+     font-weight: bold;
+ }
+ h3{
+ font-family: Arial, sans-serif;
+      text-align: center;
+      font-size: 12px;
+      margin-top: 5px;
+      margin-bottom: 0px;
+      font-weight: bold;
+ }
+.profile-container {
+    margin-top: 100px; /* Sesuaikan margin sesuai kebutuhan */
+    margin-bottom: 10px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.melankolis{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-height: 100px; /* Menetapkan tinggi maksimum untuk box4 */
+  overflow-y: auto; /* Mengaktifkan scroll jika konten lebih tinggi dari maksimum */
+  border: 1px solid white; /* Menambahkan border untuk jelasnya */
+  padding: 10px; /* Memberi ruang padding */
+  background-color: blue;
+  border-radius: 5px;
+}
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Sesuaikan margin sesuai kebutuhan */
+    margin-left: 400px;
+    font-size: 18px;
+}
+
+.button {
+    margin-right: 10px; /* Sesuaikan margin sesuai kebutuhan */
+}
+
+.button-text1 {
+    margin-left: 40px; /* Sesuaikan margin sesuai kebutuhan */
+}
+.button-text2 {
+     margin-right: 10px; /* Sesuaikan margin sesuai kebutuhan */
+}
+.save-buttons {
+    background-color: #4CAF50; /* Warna hijau */
+    color: black; /* Warna teks putih agar terlihat jelas */
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+}
+.next-buttons {
+    background-color: #4CAF50; /* Warna hijau */
+    color: black; /* Warna teks putih agar terlihat jelas */
+    width: 80px;
+    height: 40px;
+}
+.save-buttons:hover {
+    background-color: #45a049; /* Warna hijau yang berbeda saat tombol dihover */
+}
+.next-buttons:hover {
+    background-color: #45a049; /* Warna hijau yang berbeda saat tombol dihover */
+}

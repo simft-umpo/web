@@ -1,0 +1,184 @@
+/* File styles.css */
+/* CSS untuk mendesain kontainer dan tata letak */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: blue;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1 {
+    margin: 0;
+}
+h3{
+    text-align: center;
+    font-size: 36px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+h4{
+    text-align: center;
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-weight: normal;
+}
+
+.container1 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: aqua;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.container-horizontal {
+    display: flex;
+    flex-direction: row; /* Mengubah tata letak menjadi horizontal */
+    justify-content: center; /* Mengatur jarak antara kontainer */
+}
+
+.container-horizontal .box1 {
+    flex: 1; /* Membuat kontainer memiliki ukuran yang sama */
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: grey;
+    margin: 50px; /* Menambahkan jarak kanan antara kontainer */
+    text-align: center;
+    font-size: 12px;
+    max-height: 400px;
+    max-width: 200px;
+    overflow: auto;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.container-horizontal .box1:last-child {
+    margin-right: 10px; /* Menghapus jarak kanan untuk elemen terakhir */
+}
+
+/* Gaya dasar tombol */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Gaya saat tombol dihover */
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Gaya untuk elemen yang mengelompokkan tombol-tombol */
+.buttons {
+    text-align: right; /* Mengatur teks tombol di sebelah kanan */
+    margin-top: 10px; /* Mengatur jarak atas dari tombol-tombol */
+}
+
+/* Gaya untuk tombol-tombol */
+.buttons .button {
+    margin-left: 1000px; /* Mengatur jarak antara tombol-tombol */
+    margin-right: 10px; /* Mengatur jarak kanan tombol */
+    align-items: center; /* Mengatur vertikal centering */
+}
+
+/* Gaya untuk mengatur tombol dalam kotak */
+.box1 {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Gaya untuk mengatur tombol dalam kotak */
+.box1 button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    width: 150px;
+    height: 40px;
+}
+
+/* Gaya saat tombol dihover */
+.box1 button:hover {
+    background-color: #3DB7E4;
+}
+
+/* Gaya untuk mengatur jarak antara ikon dan teks di dalam tombol */
+.box1 button i.far.fa-square {
+    margin-right: 5px; /* Mengatur jarak antara ikon dan teks */
+}
+/* Gaya untuk mengatur jarak antara ikon dan teks di dalam tombol */
+.box1 button i.fas.fa-check-square {
+    margin-right: 5px;
+}
+/* Gaya untuk mengatur jarak antara ikon dan teks di dalam tombol save */
+.buttons button i.far.fa-save {
+    margin-right: 5px;
+}
+#alertMessage{
+    font-size: 24px;
+    text-align: center;
+}
+#alertMessage2{
+    font-size: 16px;
+    color: grey;
+    text-align: center;
+}
+
+.custom-alert {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 600px;
+    /* Style properties bisa disesuaikan seperti warna, ukuran, font, dan tata letak */
+}
+
+#okButton {
+    margin-top: 10px; /* Jarak dari paragraf sebelumnya */
+    margin-left: 350px; /* Meletakkan tombol di sebelah kanan */
+    background-color: #f1f1f1; /* Warna latar belakang tombol */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: blue; /* Warna teks tombol */
+    padding: 10px 20px; /* Padding tombol (atas/bawah, kiri/kanan) */
+    font-size: 16px; /* Ukuran teks tombol */
+    border: none; /* Hapus border tombol */
+    border-radius: 5px; /* Corner border radius */
+    cursor: pointer; /* Ganti kursor saat diarahkan ke tombol */
+    transition: background-color 0.3s ease; /* Efek transisi warna latar belakang saat dihover */
+}
+
+#okButton:hover {
+    background-color: blue; /* Warna latar belakang tombol saat dihover */
+    color: white; /* Warna teks tombol */
+}
+
+
+/* Seluruh kode CSS Anda lainnya */

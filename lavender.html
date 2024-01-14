@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>koleris</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="stylelavender.css">
+</head>
+<body>
+<header>
+    <div id="mySidenav" class="sidenav">
+        <i class="fas fa-circle-user fa-5x"></i> <!-- Ganti ukuran ikon sesuai kebutuhan -->
+        <h5 id="nama">Nama Pengguna</h5>
+        <h5 id="nim">NIM Pengguna</h5>
+        <a href="#" onclick="logout()">Logout</a> <!-- Tambahkan tombol logout -->
+    </div>
+
+    <div id="main">
+        <div class="menu-icon" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <h1>Selamat Datang di Halaman Utama</h1>
+    </div>
+
+</header>
+<div class="container-horizontal">
+    <div class="box1">
+        <h2><i class="fas fa-book"></i>sks in progress</h2>
+        <p>Isi kontainer 1 di sini.</p>
+    </div>
+    <div class="box1">
+        <h2><i class="fas fa-book"></i>sks completed</h2>
+        <p>Isi Kontainer 2 di sini</p>
+    </div>
+    <div class="box1">
+        <h2><i class="fas fa-book"></i>MBKM</h2>
+        <p>Isi kontainer 3 di sini.</p>
+    </div>
+    <div class="box1">
+        <h2><i class="fas fa-book"></i>Skripsi</h2>
+        <p>Isi kontainer 4 di sini.</p>
+    </div>
+</div>
+
+<div class="container2">
+    <h2>praktikum</h2>
+    <div class="container-vertikal">
+        <div class="box4">
+            <h3>Ditempuh</h3>
+            <p><i class="fas fa-book"></i>otomasi</p>
+            <p><i class="fas fa-book"></i>otomasi</p>
+            <p><i class="fas fa-book"></i>otomasi</p>
+            <p><i class="fas fa-book"></i>otomasi</p>
+            <p><i class="fas fa-book"></i>otomasi</p>
+            <p><i class="fas fa-book"></i>otomasi</p>
+            <p><i class="fas fa-book"></i>otomasi</p>
+            <p><i class="fas fa-book"></i>otomasi</p>
+        </div>
+
+        <div class="box4">
+            <h3>status pembayaran</h3>
+            <p><i class="fas fa-check-circle"></i>done</p>
+            <p><i class="fas fa-check-circle"></i>done</p>
+            <p><i class="fas fa-check-circle"></i>done</p>
+            <p><i class="fas fa-check-circle"></i>done</p>
+            <p><i class="fas fa-check-circle"></i>done</p>
+            <p><i class="fas fa-check-circle"></i>done</p>
+            <p><i class="fas fa-check-circle"></i>done</p>
+            <p><i class="fas fa-check-circle"></i>done</p>
+        </div>
+
+        <div class="box4">
+            <h3>duration</h3>
+            <p>14:10</p>
+            <p>14:10</p>
+            <p>14:10</p>
+            <p>14:10</p>
+            <p>14:10</p>
+            <p>14:10</p>
+            <p>14:10</p>
+            <p>14:10</p>
+        </div>
+
+        <div class="box4">
+            <h3>dosen</h3>
+            <p>abcd</p>
+            <p>abcd</p>
+            <p>abcd</p>
+            <p>abcd</p>
+            <p>abcd</p>
+            <p>abcd</p>
+            <p>abcd</p>
+            <p>abcd</p>
+        </div>
+    </div>
+</div>
+<div class="container3">
+    <h2>mata kuliah ditempuh</h2>
+    <div class="container-horizontal2">
+        <div class="box2">
+            <div class="box3">
+                <h2><i class="fas fa-book"></i>blockchain</h2>
+            </div>
+            <h4>hello world</h4>
+            <p class="p1">hello world</p>
+        </div>
+        <div class="box2">
+            <div class="box3">
+                <h2><i class="fas fa-book"></i>blockchain</h2>
+            </div>
+            <h4>hello word</h4>
+            <p class="p1">hello world</p>
+        </div>
+        <div class="box2">
+            <div class="box3">
+                <h2><i class="fas fa-book"></i>blockchain</h2>
+            </div>
+            <h4>hello world</h4>
+            <p class="p1">hello world</p>
+        </div>
+        <div class="box2">
+            <div class="box3">
+                <h2><i class="fas fa-book"></i>blockchain</h2>
+            </div>
+            <h4>hello world</h4>
+            <p class="p1">hello world</p>
+        </div>
+        <div class="box2">
+            <div class="box3">
+                <h2><i class="fas fa-book"></i>blockchain</h2>
+            </div>
+            <h4>hello world</h4>
+            <p class="p1">hello world</p>
+        </div>
+    </div>
+</div>
+<script>
+
+    // Fungsi untuk mengambil data dari backend dan mengganti teks pada halaman
+    function fetchDataAndDisplay() {
+        // Mengambil NIM dari sessionStorage
+        var nim = sessionStorage.getItem('nim');
+
+        if (!nim) {
+            // Handle jika NIM tidak ditemukan (misalnya, user belum login)
+            console.error('NIM not found in sessionStorage');
+            return;
+        }
+
+        // Kirim permintaan GET ke backend untuk mendapatkan data berdasarkan nim
+        fetch(`https://a8fb-103-245-26-70.ngrok-free.app/api/get-by-nim/${nim}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Data not found");
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Ganti teks pada halaman dengan data yang diambil dari backend
+                document.getElementById('nama').innerText = data.nama; // Ganti 'nama' sesuai dengan nama atribut di entitas Mahasiswa
+                document.getElementById('nim').innerText = nim; // Menggunakan nim yang diambil dari sessionStorage
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+
+    // Panggil fungsi untuk mengambil data dan menampilkan saat halaman dimuat
+    document.addEventListener('DOMContentLoaded', fetchDataAndDisplay);
+
+    function toggleNav() {
+        const sidenav = document.getElementById("mySidenav");
+        const main = document.getElementById("main");
+        const icon = document.querySelector(".menu-icon i");
+
+        if (sidenav.style.width === "250px") {
+            sidenav.style.width = "0";
+            main.style.marginLeft = "0";
+            icon.classList.remove("fa-times");
+        } else {
+            sidenav.style.width = "250px";
+            main.style.marginLeft = "250px";
+            icon.classList.add("fa-times");
+        }
+    }
+        function logout() {
+        console.log("Tombol logout ditekan!");
+        alert("Anda telah logout!"); // Contoh: Tampilkan pesan alert
+        // ... (Tambahkan logika logout sesuai kebutuhan)
+
+        // Setelah logout, reset sejarah navigasi dan arahkan ke halaman login (gantilah "login.html" dengan halaman login yang sesuai)
+        window.history.pushState({}, document.title, window.location.href);
+        window.location.replace("index.html");
+    }
+</script>
+</body>
+</html>
