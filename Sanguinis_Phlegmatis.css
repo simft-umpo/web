@@ -35,6 +35,15 @@
       margin-bottom: 0px;
       font-weight: bold;
  }
+ h4{
+   font-family: Arial, sans-serif;
+         text-align: center;
+         font-size: 16px;
+         margin-top: 5px;
+         margin-bottom: 5px;
+         padding: 10px;
+         font-weight: bold;
+   }
 .profile-container {
     margin-top: 100px; /* Sesuaikan margin sesuai kebutuhan */
     margin-bottom: 10px;
@@ -50,6 +59,19 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  max-height: 100px; /* Menetapkan tinggi maksimum untuk box4 */
+  overflow-y: auto; /* Mengaktifkan scroll jika konten lebih tinggi dari maksimum */
+  border: 1px solid white; /* Menambahkan border untuk jelasnya */
+  padding: 10px; /* Memberi ruang padding */
+  background: linear-gradient(to top, yellow, aqua); /* Ganti warna sesuai kebutuhan Anda */
+  border-radius: 5px;
+}
+.warna{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   max-height: 100px; /* Menetapkan tinggi maksimum untuk box4 */
   overflow-y: auto; /* Mengaktifkan scroll jika konten lebih tinggi dari maksimum */
   border: 1px solid white; /* Menambahkan border untuk jelasnya */
