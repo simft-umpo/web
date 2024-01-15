@@ -17,6 +17,9 @@ header {
 h1 {
     margin: 0;
 }
+h2{
+color: grey;
+}
 h3{
     text-align: center;
     font-size: 36px;

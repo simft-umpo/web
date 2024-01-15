@@ -1,0 +1,221 @@
+/* CSS untuk mendesain kontainer dan tata letak */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+         header {
+                    background-color: purple;
+                    padding: 15px;
+                    text-align: center;
+                    color: black;
+                    position: relative;
+                    max-width: auto;
+                    max-height: 60px;
+                    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+                }
+        .profile-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 120px;
+                height: 120px;
+                background-color: #fff;
+                border-radius: 50%;
+                margin: 0 auto 20px; /* Mengatur margin untuk pusat */
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .profile-icon i {
+                color: black; /* Sesuaikan dengan warna latar belakang Anda */
+            }
+        h1{
+            margin:0;
+        }
+        h4{
+            text-align: left;
+            margin: 0;
+        }
+         h5{
+                 font-family: Arial, sans-serif;
+                      text-align: center;
+                      font-size: 12px;
+                      margin-top: 5px;
+                      margin-bottom: 0px;
+                      font-weight: bold;
+                      color: white;
+                 }
+         .p1 {
+           text-align: left;
+           margin: 0;
+         }
+        .container1 {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: purple;
+            border-radius: 5px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+         .container2 {
+            max-height: 200px; /* Menetapkan tinggi maksimum */
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: purple;
+            border-radius: 5px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            /*overflow-y: scroll; /* Mengaktifkan scroll vertikal */
+        }
+         .container3 {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: purple;
+            border-radius: 5px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+
+        .container-horizontal {
+            display: flex;
+            flex-direction: row; /* Mengubah tata letak menjadi horizontal */
+            justify-content: center; /* Mengatur jarak antara kontainer */
+        }
+        .container-vertikal {
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                    max-height: 100px; /* Menetapkan tinggi maksimum untuk box4 */
+                    overflow-y: auto; /* Mengaktifkan scroll jika konten lebih tinggi dari maksimum */
+                    border: 1px solid purple; /* Menambahkan border untuk jelasnya */
+                    padding: 10px; /* Memberi ruang padding */
+                    background-color: white;
+                    border-radius: 5px;
+                }
+       .container-horizontal2 {
+                           display: flex;
+                           flex-direction: row; /* Mengubah tata letak menjadi horizontal */
+                           justify-content: center; /* Mengatur jarak antara kontainer */
+                           gap: 20px;
+                           max-width: 900px; /* Menetapkan tinggi maksimum untuk box4 */
+                           overflow-x: auto; /* Mengaktifkan scroll horizontal */
+                           border: 1px solid purple; /* Menambahkan border untuk jelasnya */
+                           padding: 10px; /* Memberi ruang padding */
+                           background-color: white;
+                           border-radius: 5px;
+                           margin-right: 20px;
+                           margin-left: 30px;
+                       }
+        .container-horizontal .box1 {
+            flex: 1; /* Membuat kontainer memiliki ukuran yang sama */
+            padding: 20px;
+            border: 1px solid purple;
+            border-radius: 5px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+            background-color: purple;
+            margin: 50px; /* Menambahkan jarak kanan antara kontainer */
+            text-align: center;
+            font-size: 12px;
+        }
+         .container-horizontal2 .box2 {
+            flex: 0 0 auto; /* Membuat kontainer memiliki ukuran yang sama */
+            padding: 20px;
+            border: px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+            background-color: white;
+            border-radius 5px;
+            margin-right: 10px;
+            margin-left: 10px;
+            text-align: center;
+            font-size: 12px;
+        }
+        .container-horizontal2 .box3 {
+                    flex: 1; /* Membuat kontainer memiliki ukuran yang sama */
+                    padding: 10px;
+                    border: 1px solid purple;
+                    border-radius: 5px;
+                    background-color: purple;
+                    margin: 10px; /* Menambahkan jarak kanan antara kontainer */
+                    text-align: center;
+                    font-size: 12px;
+                }
+        .box4 {
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      text-align: center;
+               }
+        .box4 h3 {
+                   margin-top: 10px;
+               }
+       .box4 p {
+                   margin: 5px 0;
+                   /*color: green;*/
+               }
+      .box4 p i.fas.fa-check-circle {
+                color: green;
+      }
+        .container-horizontal .box:last-child {
+            margin-right: 10p; /* Menghapus jarak kanan untuk elemen terakhir */
+        }
+
+      .fas {
+            margin-right: 5px;
+      }
+       .sidenav {
+                 height: 100%;
+                 width: 0;
+                 position: fixed;
+                 z-index: 1;
+                 top: 0;
+                 left: 0;
+                 background-color: #111;
+                 overflow-x: hidden;
+                 transition: 0.5s;
+                 padding-top: 60px;
+             }
+
+                    .sidenav a {
+                        padding: 8px 8px 8px 32px;
+                        text-decoration: none;
+                        font-size: 16px;
+                        color: white;
+                        display: block;
+                        transition: 0.3s;
+                    }
+
+                    .sidenav a:hover {
+                        background-color: #ddd;
+                        color: black;
+                    }
+
+             #main {
+                 transition: margin-left .5s;
+                 padding: 16px;
+             }
+
+             .menu-icon {
+                 cursor: pointer;
+                 font-size: 24px;
+                 color: #fff;
+                 position: absolute;
+                 top: 2 0px;
+                 left: 10px;
+                 z-index: 2;
+             }
+
+             .menu-icon i {
+                 transition: 0.3s;
+             }
+             .sidenav a img {
+                         width: 100px; /* Sesuaikan ukuran gambar */
+                         height: 100px;
+                         margin-right: 8px; /* Sesuaikan margin gambar */
+                         vertical-align: middle;
+                     }
+

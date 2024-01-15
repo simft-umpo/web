@@ -135,5 +135,25 @@
   <button id="okButton">Isi Kembali Kuesioner</button>
 </div>
   <script src="script2.js"></script>
+<script>
+    // Fungsi untuk menyembunyikan elemen H2 berdasarkan kata kunci
+    function hideElements() {
+      const keywords = ["sanguinis", "melankolis", "koleris", "phlegmatis"];
+
+      // Loop melalui semua elemen H2
+      document.querySelectorAll('h2').forEach(h2 => {
+        // Periksa apakah teks H2 mengandung salah satu kata kunci
+        const shouldHide = keywords.some(keyword => h2.innerText.toLowerCase().includes(keyword));
+
+        // Sembunyikan elemen jika ditemukan kata kunci
+        if (shouldHide) {
+          h2.style.display = 'none';
+        }
+      });
+    }
+
+    // Panggil fungsi saat dokumen selesai dimuat
+    document.addEventListener('DOMContentLoaded', hideElements);
+  </script>
 </body>
 </html>

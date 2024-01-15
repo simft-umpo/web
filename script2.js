@@ -64,7 +64,7 @@ function updateClickedCount(containerId) {
 
     // Tampilkan notifikasi konfirmasi jika jumlah total klik mencapai batasan maksimum
     if (totalClicks >= maxClicks) {
-        var confirmation = confirm('Total semua pilihan sudah mencapai 20. Apakah Anda ingin mereset semua pilihan?');
+        var confirmation = confirm('Total semua pilihan sudah mencapai 20. tekan Oke untuk tetap di halaman, Batal untuk memilih kembali');
 
         if (confirmation) {
             // Jika pengguna memilih "OK," reset semua pilihan
@@ -1876,9 +1876,23 @@ function determinePage(sanguinis, melankolis, koleris, phlegmatis) {
         // Redirect ke halaman yang sesuai di frontend
         window.location.href = frontendPage;
     } else {
-        // Tambahkan tindakan yang sesuai jika pola tidak ditemukan
-        console.error('Pola tidak ditemukan:', patternKey);
-    }
+          // Jika pola tidak sesuai, lakukan tindakan lain atau arahkan ke halaman default
+          var customAlert = document.getElementById('customAlert');
+          var alertMessage = document.getElementById('alertMessage');
+          var okButton = document.getElementById('okButton');
+
+          // Set pesan alert
+          alertMessage.innerHTML = 'Terjadi Masalah';
+          alertMessage2.innerHTML = 'Hasil kuesioner anda tidak dapat di proses, karena hasil tidak ada di sistem. Tolong isi kembali kuesioner anda. Klik Isi kembali kuesioner untuk mencoba lagi';
+
+          // Tampilkan elemen custom-alert
+          customAlert.style.display = 'block';
+
+          // Tambahkan event listener pada tombol 'OK'
+          okButton.addEventListener('click', function() {
+              window.location.href = 'angketpertanyaan.html';
+          });
+      }
 }
 
 // Fungsi untuk membuat pemetaan antara halaman frontend dan backend

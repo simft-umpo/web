@@ -113,7 +113,7 @@
             .then(data => {
                 // Handle respons dari backend
                 console.log(data);
-                alert("Login successful! Nim: " + data.nim + ", Password: " + data.password);
+                alert("Login successful! Nim: " + data.nim + ", Password: ***");
 
                 // Simpan NIM ke sessionStorage atau localStorage
                 sessionStorage.setItem('nim', data.nim);
