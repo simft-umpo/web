@@ -21,7 +21,7 @@
 </div>
 
 <div class="sanguinis">
-    <h4>Anda adalah seorang sanguinis koleris gabungan dari sanguinis yang Spontan, lincah, periang dan koleris yang Petualang, persuasive, percaya diri</h4>
+    <h4>Anda adalah seorang  sanguinis yang Spontan, lincah, periang - koleris yang Petualang, persuasive, percaya diri</h4>
 </div>
 <div class="warna">
     <h4>Warna oranye</h4>
@@ -59,7 +59,7 @@
       }
 
       // Kirim permintaan GET ke backend untuk mendapatkan data berdasarkan nim
-      fetch(`https://adequate-manatee-absolutely.ngrok-free.app/api/get-by-nim/${nim}`)
+      fetch(`http://simft.umpo.ac.id/kansei-be/api/get-by-nim/${nim}`)
             .then(response => {
               if (!response.ok) {
                 throw new Error("Data not found");

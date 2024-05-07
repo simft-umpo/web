@@ -63,7 +63,7 @@
   overflow-y: auto; /* Mengaktifkan scroll jika konten lebih tinggi dari maksimum */
   border: 1px solid white; /* Menambahkan border untuk jelasnya */
   padding: 10px; /* Memberi ruang padding */
-  background-color: lavender;
+  background-color: #99620c;
   border-radius: 5px;
 }
 .warna{
@@ -76,7 +76,7 @@
   overflow-y: auto; /* Mengaktifkan scroll jika konten lebih tinggi dari maksimum */
   border: 1px solid white; /* Menambahkan border untuk jelasnya */
   padding: 10px; /* Memberi ruang padding */
-  background-color: lavender;
+  background-color: #99620c;
   border-radius: 5px;
 }
 .buttons-container {

@@ -19,7 +19,7 @@
         align-items: center;
         width: 1231px;
         height: 40px;
-        background-color: yellow;
+        background-color: #806b80;
         position: absolute;
         transition: 0.5s;
         }
@@ -154,12 +154,12 @@
  /* Box1 di Container Horizontal */
  .container-horizontal .box1 {
      flex: 1;
-     background-color: #ebeb00; /* Warna latar belakang untuk Box1 pada Container Horizontal */
+     background-color: #806b80; /* Warna latar belakang untuk Box1 pada Container Horizontal */
      padding: 20px;
      height: 500px;
      max-width: 500px; /* Ukuran maksimal lebar untuk Box1 pada Container Horizontal */
      border-radius: 5px;
-     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
      overflow-y: auto; /* Mengaktifkan scroll jika konten lebih tinggi dari maksimum */
 
  }
