@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Login</title>
     <style>
- body {
+        body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
@@ -95,46 +95,39 @@
 
 <script>
     function login() {
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
+        var formData = new FormData();
+        formData.append("nim", document.getElementById("username").value);
+        formData.append("password", document.getElementById("password").value);
 
-        var payload = {
-            nim: username,
-            password: password
-        };
-
-        fetch('https://adequate-manatee-absolutely.ngrok-free.app/api/login-mahasiswa/' + payload.nim + '/' + payload.password)
+        fetch('http://simft.umpo.ac.id/kansei-be/api/mahasiswa-create', {
+            method: 'POST',
+            body: formData
+        })
             .then(response => {
                 if (!response.ok) {
-                    throw new Error("Mahasiswa not found");
+                    throw new Error("Failed to create mahasiswa");
                 }
                 return response.json();
             })
             .then(data => {
                 // Handle respons dari backend
                 console.log(data);
-                alert("Login successful! Nim: " + data.nim + ", Password: " + data.password);
+                alert("Mahasiswa login successfully! Nim: " + data.nim + ", Password: ***");
 
                 // Simpan NIM ke sessionStorage atau localStorage
                 sessionStorage.setItem('nim', data.nim);
 
-                // Redirect berdasarkan nilai warna
-                if (data.warna) {
-                    // Jika warna tidak kosong, redirect ke halaman warna sesuai dengan nilai warna
-                    window.location.href = data.warna;
-                } else {
-                    // Jika warna kosong, redirect ke halaman angketpertanyaan.html
-                    window.location.href = 'angketpertanyaan.html';
-                }
+                // Redirect ke halaman berikutnya setelah berhasil membuat mahasiswa
+                window.location.href = 'angketpertanyaan2.html'; // Ganti dengan halaman tujuan Anda
             })
             .catch(error => {
                 // Handle kesalahan
                 console.error(error);
-                alert("Login failed. " + error.message);
+                alert("Failed to login mahasiswa. " + error.message);
             });
     }
-</script>
 
+</script>
 
 </body>
 </html>

@@ -21,9 +21,11 @@
 </div>
 
 <div class="sanguinis">
-    <h4>Anda adalah seorang sanguinis melankolis yang ceria, energik, dan ekspresif dengan sifat serius, pemikiran mendalam</h4>
+    <h4>Anda adalah seorang sanguinis yang Spontan, lincah, periang - melankolis yang Penuh pikiran, setia, tekun </h4>
 </div>
-
+<div class="warna">
+    <h4>Warna hijau</h4>
+</div>
 <div class="buttons-container">
 
     <div class="buttons">
@@ -57,7 +59,7 @@
       }
 
       // Kirim permintaan GET ke backend untuk mendapatkan data berdasarkan nim
-      fetch(`https://adequate-manatee-absolutely.ngrok-free.app/api/get-by-nim/${nim}`)
+      fetch(`http://simft.umpo.ac.id/kansei-be/api/get-by-nim/${nim}`)
             .then(response => {
               if (!response.ok) {
                 throw new Error("Data not found");

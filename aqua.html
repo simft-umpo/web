@@ -3,138 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>koleris</title>
+    <title>Phlegmstis</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styleaqua.css">
+    <link rel="stylesheet" href="css/styleaqua.css">
 </head>
 <body>
 <header>
-    <div id="mySidenav" class="sidenav">
-        <i class="fas fa-circle-user fa-5x"></i> <!-- Ganti ukuran ikon sesuai kebutuhan -->
-        <h5 id="nama">Nama Pengguna</h5>
-        <h5 id="nim">NIM Pengguna</h5>
-        <a href="#" onclick="logout()">Logout</a> <!-- Tambahkan tombol logout -->
+    <div class="navbar">
+        <div id="mySidenav" class="sidenav">
+            <div class="profile-icon">
+                <i class="fas fa-user fa-5x"></i>
+            </div>
+            <h5 id="nama">Nama Pengguna</h5>
+            <h5 id="nim">NIM Pengguna</h5>
+            <a href="#" onclick="logout()">Logout</a> <!-- Tambahkan tombol logout -->
+        </div>
     </div>
-
-    <div id="main">
-        <div class="menu-icon" onclick="toggleNav()">
+    <div id="main" class="sidebar">
+        <div class="menu-icon" onclick="toggleNav()" style="color: black;">
             <i class="fas fa-bars"></i>
         </div>
-        <h1>Selamat Datang di Halaman Utama</h1>
+        <!--        <div class="navigation">-->
+        <!--            <a href="#" onclick="()">Home</a>-->
+        <!--            <a href="#" onclick="()">MBKM</a>-->
+        <!--            <a href="#" onclick="()">Skripsi</a>-->
+        <!--        </div>-->
+        <div class="judul-center">
+            <img src="SimFT.png" alt="selamt datang di SimFT" width="50" />
+            <h2>selamat datang di SimFT</h2>
+        </div>
     </div>
-
 </header>
-<div class="container-horizontal">
-    <div class="box1">
-        <h2><i class="fas fa-book"></i>sks in progress</h2>
-        <p>Isi kontainer 1 di sini.</p>
-    </div>
-    <div class="box1">
-        <h2><i class="fas fa-book"></i>sks completed</h2>
-        <p>Isi Kontainer 2 di sini</p>
-    </div>
-    <div class="box1">
-        <h2><i class="fas fa-book"></i>MBKM</h2>
-        <p>Isi kontainer 3 di sini.</p>
-    </div>
-    <div class="box1">
-        <h2><i class="fas fa-book"></i>Skripsi</h2>
-        <p>Isi kontainer 4 di sini.</p>
-    </div>
-</div>
+<!--<header class="navbar-container">-->
+<!--    <div class="logo">-->
+<!--        <img src="SimFT.png" alt="selamt datang di smft" />-->
+<!--        <h2>selamat datang di SimFT</h2>-->
+<!--    </div>-->
+<!--    <nav class="nav-list">-->
+<!--        <ul>-->
+<!--            <li><a href="#" onclick="()">Home</a></li>-->
+<!--            <li><a href="#" onclick="()">Skripsi</a></li>-->
+<!--            <li><a href="#" onclick="()">MBKM</a></li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+<!--</header>-->
+<main>
+    <article>
+        <div class="container-horizontal">
+            <div class="box1">
+                <h3>MBKM</h3>
+                <div class="Praktikum">
+                    <ul class="praktikum-info">
+                        <li>
+                            <h3><i class="fas fa-book"></i>&nbsp;Binar Academy</h3>
+                            <p1>semester: 6</p1>
+                            <div class="praktikum-details">
+                                <p2>Durasi: 6 Bulan</p2>
+                                <p2>Sks: 20</p2>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Praktikum">
+                    <ul class="praktikum-info">
+                        <li>
+                            <h3><i class="fas fa-book"></i>&nbsp;Dicoding</h3>
+                            <p1>semester: 6</p1>
+                            <div class="praktikum-details">
+                                <p2>Durasi: 6 Bulan</p2>
+                                <p2>Sks: 20</p2>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-<div class="container2">
-    <h2>praktikum</h2>
-    <div class="container-vertikal">
-        <div class="box4">
-            <h3>Ditempuh</h3>
-            <p><i class="fas fa-book"></i>otomasi</p>
-            <p><i class="fas fa-book"></i>otomasi</p>
-            <p><i class="fas fa-book"></i>otomasi</p>
-            <p><i class="fas fa-book"></i>otomasi</p>
-            <p><i class="fas fa-book"></i>otomasi</p>
-            <p><i class="fas fa-book"></i>otomasi</p>
-            <p><i class="fas fa-book"></i>otomasi</p>
-            <p><i class="fas fa-book"></i>otomasi</p>
+            <div class="box1">
+                <h3>Skripsi</h3>
+                <div class="Praktikum">
+                    <ul class="praktikum-info">
+                        <li>
+                            <h3><i class="fas fa-book"></i>&nbsp;Skripsi</h3>
+                            <div class="praktikum-details">
+                                <p2><i class="fas fa-dollar"></i>&nbsp;Rp.1.050.000</p2>
+                                <p2>Sks:4</p2>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-        <div class="box4">
-            <h3>status pembayaran</h3>
-            <p><i class="fas fa-check-circle"></i>done</p>
-            <p><i class="fas fa-check-circle"></i>done</p>
-            <p><i class="fas fa-check-circle"></i>done</p>
-            <p><i class="fas fa-check-circle"></i>done</p>
-            <p><i class="fas fa-check-circle"></i>done</p>
-            <p><i class="fas fa-check-circle"></i>done</p>
-            <p><i class="fas fa-check-circle"></i>done</p>
-            <p><i class="fas fa-check-circle"></i>done</p>
-        </div>
-
-        <div class="box4">
-            <h3>duration</h3>
-            <p>14:10</p>
-            <p>14:10</p>
-            <p>14:10</p>
-            <p>14:10</p>
-            <p>14:10</p>
-            <p>14:10</p>
-            <p>14:10</p>
-            <p>14:10</p>
-        </div>
-
-        <div class="box4">
-            <h3>dosen</h3>
-            <p>abcd</p>
-            <p>abcd</p>
-            <p>abcd</p>
-            <p>abcd</p>
-            <p>abcd</p>
-            <p>abcd</p>
-            <p>abcd</p>
-            <p>abcd</p>
-        </div>
+    </article>
+</main>
+<footer>
+    <div class="center-container">
+        <h1 class="center-text">Hak Cipta &copy; 2024 - SimFT</h1>
     </div>
-</div>
-<div class="container3">
-    <h2>mata kuliah ditempuh</h2>
-    <div class="container-horizontal2">
-        <div class="box2">
-            <div class="box3">
-                <h2><i class="fas fa-book"></i>blockchain</h2>
-            </div>
-            <h4>hello world</h4>
-            <p class="p1">hello world</p>
-        </div>
-        <div class="box2">
-            <div class="box3">
-                <h2><i class="fas fa-book"></i>blockchain</h2>
-            </div>
-            <h4>hello word</h4>
-            <p class="p1">hello world</p>
-        </div>
-        <div class="box2">
-            <div class="box3">
-                <h2><i class="fas fa-book"></i>blockchain</h2>
-            </div>
-            <h4>hello world</h4>
-            <p class="p1">hello world</p>
-        </div>
-        <div class="box2">
-            <div class="box3">
-                <h2><i class="fas fa-book"></i>blockchain</h2>
-            </div>
-            <h4>hello world</h4>
-            <p class="p1">hello world</p>
-        </div>
-        <div class="box2">
-            <div class="box3">
-                <h2><i class="fas fa-book"></i>blockchain</h2>
-            </div>
-            <h4>hello world</h4>
-            <p class="p1">hello world</p>
-        </div>
-    </div>
-</div>
+</footer>
+
 <script>
 
     // Fungsi untuk mengambil data dari backend dan mengganti teks pada halaman
@@ -149,7 +115,7 @@
         }
 
         // Kirim permintaan GET ke backend untuk mendapatkan data berdasarkan nim
-        fetch(`https://adequate-manatee-absolutely.ngrok-free.app/api/get-by-nim/${nim}`)
+        fetch(`http://simft.umpo.ac.id/kansei-be/api/get-by-nim/${nim}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Data not found");
