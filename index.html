@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Login</title>
     <style>
- body {
+        body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
@@ -95,25 +95,32 @@
 
 <script>
     function login() {
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
+        var formData = new FormData();
+        formData.append("nim", document.getElementById("username").value);
+        formData.append("password", document.getElementById("password").value);
 
-        var payload = {
-            nim: username,
-            password: password
-        };
-
-        fetch('https://adequate-manatee-absolutely.ngrok-free.app/api/login-mahasiswa/' + payload.nim + '/' + payload.password)
+        fetch('http://simft.umpo.ac.id/kansei/api/mahasiswa-create', {
+            method: 'POST',
+            body: formData
+        })
             .then(response => {
-                if (!response.ok) {
-                    throw new Error("Mahasiswa not found");
+                if (response.status === 409) { // 409 adalah kode status konflik
+                    // Jika data pengguna sudah ada, langsung lakukan login
+                    return fetch('http://simft.umpo.ac.id/kansei/api/login-mahasiswa/' + formData.get("nim") + '/' + formData.get("password"));
+                } else if (!response.ok) {
+                    throw new Error("Failed to create mahasiswa");
                 }
                 return response.json();
             })
             .then(data => {
                 // Handle respons dari backend
+                if (data.error) {
+                    // Handle kesalahan login
+                    alert("Failed to login mahasiswa. " + data.error);
+                    return;
+                }
                 console.log(data);
-                alert("Login successful! Nim: " + data.nim + ", Password: " + data.password);
+                alert("Mahasiswa login successfully! Nim: " + data.nim + ", Password: " + "********");
 
                 // Simpan NIM ke sessionStorage atau localStorage
                 sessionStorage.setItem('nim', data.nim);
@@ -124,17 +131,18 @@
                     window.location.href = data.warna;
                 } else {
                     // Jika warna kosong, redirect ke halaman angketpertanyaan.html
-                    window.location.href = 'angketpertanyaan.html';
+                    window.location.href = 'angketpertanyaan2.html';
                 }
             })
             .catch(error => {
                 // Handle kesalahan
                 console.error(error);
-                alert("Login failed. " + error.message);
+                alert("Failed to create or login mahasiswa. " + error.message);
             });
     }
-</script>
 
+
+</script>
 
 </body>
 </html>

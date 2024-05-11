@@ -18,7 +18,7 @@ h1 {
     margin: 0;
 }
 h2{
-color: grey;
+color: #d4f1f9;
 }
 h3{
     text-align: center;
@@ -44,22 +44,28 @@ h4{
     text-align: center;
 }
 
-.container-horizontal {
-    display: flex;
-    flex-direction: row; /* Mengubah tata letak menjadi horizontal */
-    justify-content: center; /* Mengatur jarak antara kontainer */
+.container-vertikal .box1 {
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                    max-height: 90px; /* Menetapkan tinggi maksimum untuk box4 */
+                    border: 1px solid #d4f1f9; /* Menambahkan border untuk jelasnya */
+                    padding: 10px; /* Memberi ruang padding */
+                    background-color: #d4f1f9;
+                    border-radius: 5px;
+		            text-align: center;
+                    font-size: 12px;
 }
-
-.container-horizontal .box1 {
-    flex: 1; /* Membuat kontainer memiliki ukuran yang sama */
-    padding: 20px;
-    border-radius: 5px;;
-    margin: 50px; /* Menambahkan jarak kanan antara kontainer */
-    text-align: center;
-    font-size: 12px;
-    height:auto;
-    width:auto;
-}
+ .container-vertikal {
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                    max-height: 40px; /* Menetapkan tinggi maksimum untuk box4 */
+                    border: 1px solid #d4f1f9; /* Menambahkan border untuk jelasnya */
+                    padding: 10px; /* Memberi ruang padding */
+                    background-color: #d4f1f9;
+                    border-radius: 5px;
+ }
 
 .container-horizontal .box1:last-child {
     margin-right: 10px; /* Menghapus jarak kanan untuk elemen terakhir */
@@ -138,6 +144,14 @@ h4{
     font-size: 24px;
     text-align: center;
 }
+#alertMessage3{
+    font-size: 24px;
+    text-align: center;
+}
+#alertMessage4{
+    font-size: 24px;
+    text-align: center;
+}
 #alertMessage2{
     font-size: 16px;
     color: grey;
@@ -145,6 +159,21 @@ h4{
 }
 
 .custom-alert {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 600px;
+    /* Style properties bisa disesuaikan seperti warna, ukuran, font, dan tata letak */
+}
+.custom-alert3 {
     display: none;
     position: fixed;
     top: 50%;
