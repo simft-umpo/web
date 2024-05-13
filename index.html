@@ -99,14 +99,14 @@
         formData.append("nim", document.getElementById("username").value);
         formData.append("password", document.getElementById("password").value);
 
-        fetch('http://localhost:8090/api/mahasiswa-create', {
+        fetch('http://simft.umpo.ac.id/kansei/api/mahasiswa-create', {
             method: 'POST',
             body: formData
         })
             .then(response => {
                 if (response.status === 409) { // 409 adalah kode status konflik
                     // Jika data pengguna sudah ada, langsung lakukan login
-                    return fetch('http://localhost:8090/api/login-mahasiswa/' + formData.get("nim") + '/' + formData.get("password"));
+                    return fetch('http://simft.umpo.ac.id/kansei/api/login-mahasiswa/' + formData.get("nim") + '/' + formData.get("password"));
                 } else if (!response.ok) {
                     throw new Error("Failed to create mahasiswa");
                 }
