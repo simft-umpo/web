@@ -18,7 +18,7 @@ h1 {
     margin: 0;
 }
 h2{
-color: #d4f1f9;
+    color: #d4f1f9;
 }
 h3{
     text-align: center;
@@ -45,27 +45,27 @@ h4{
 }
 
 .container-vertikal .box1 {
-                    display: flex;
-                    justify-content: center;
-                    gap: 10px;
-                    max-height: 90px; /* Menetapkan tinggi maksimum untuk box4 */
-                    border: 1px solid #d4f1f9; /* Menambahkan border untuk jelasnya */
-                    padding: 10px; /* Memberi ruang padding */
-                    background-color: #d4f1f9;
-                    border-radius: 5px;
-		            text-align: center;
-                    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-height: 90px; /* Menetapkan tinggi maksimum untuk box4 */
+    border: 1px solid #d4f1f9; /* Menambahkan border untuk jelasnya */
+    padding: 10px; /* Memberi ruang padding */
+    background-color: #d4f1f9;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px;
 }
- .container-vertikal {
-                    display: flex;
-                    justify-content: center;
-                    gap: 10px;
-                    max-height: 40px; /* Menetapkan tinggi maksimum untuk box4 */
-                    border: 1px solid #d4f1f9; /* Menambahkan border untuk jelasnya */
-                    padding: 10px; /* Memberi ruang padding */
-                    background-color: #d4f1f9;
-                    border-radius: 5px;
- }
+.container-vertikal {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-height: 40px; /* Menetapkan tinggi maksimum untuk box4 */
+    border: 1px solid #d4f1f9; /* Menambahkan border untuk jelasnya */
+    padding: 10px; /* Memberi ruang padding */
+    background-color: #d4f1f9;
+    border-radius: 5px;
+}
 
 .container-horizontal .box1:last-child {
     margin-right: 10px; /* Menghapus jarak kanan untuk elemen terakhir */
@@ -112,8 +112,8 @@ h4{
     display: inline-flex;
     align-items: center;
     padding: 10px 20px;
-    background-color: blue;
-    color: #fff;
+    background-color: grey;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
