@@ -15,14 +15,20 @@
 <h2>Berikut adalah hasil quesioner</h2>
 
 <div class="profile-container">
-  <i class="fas fa-circle-user fa-5x"></i> <!-- Ganti ukuran ikon sesuai kebutuhan -->
+  <div class="profile-icon">
+    <i class="fas fa-circle-user fa-5x"></i>
+  </div>
   <h3 id="nama">Nama Pengguna</h3>
   <h3 id="nim">NIM Pengguna</h3>
 </div>
 
-<div class="phlegmatis">
-  <h4>Anda adalah seorang phlegmatis yang Sabar, ramah, puas</h4>
-</div>
+  <div class="phlegmatis">
+    <h4>Anda adalah seorang phlegmatis yang Sabar, ramah, puas</h4>
+  </div>
+
+  <div class="warna">
+    <h4>Warna Aqua</h4>
+  </div>
 
   <div class="buttons">
     <span class="button-text2">Klik Button Next untuk melanjutkan ke halaman utama</span>
@@ -50,7 +56,7 @@
       }
 
       // Kirim permintaan GET ke backend untuk mendapatkan data berdasarkan nim
-      fetch(`https://adequate-manatee-absolutely.ngrok-free.app/api/get-by-nim/${nim}`)
+      fetch(`http://simft.umpo.ac.id/kansei/api/get-by-nim/${nim}`)
             .then(response => {
               if (!response.ok) {
                 throw new Error("Data not found");
