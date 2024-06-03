@@ -1,0 +1,92 @@
+/* CSS untuk mendesain kontainer dan tata letak */
+
+        body {
+          font-family: sans-serif;
+          transition: background-color .5s;
+          margin:0px;
+          padding:0px;
+        }
+
+        .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+        }
+
+        .sidenav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+          color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
+
+        .main {
+          transition: margin-left .5s;
+          padding: 16px;
+          background-color: #806680;
+        }
+        #main {
+          transition: margin-left .5s;
+          padding: 0px;
+        }
+
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 18px;}
+          .sidenav a {font-size: 15px;}
+        }
+        .profile{
+        color:white;
+        display:flex;
+        justify-content:center;
+        margin-top:8px;
+        }
+        .profile i {
+            font-size: 3rem; /* Ganti dengan ukuran yang Anda inginkan, seperti '20px' atau '2em' */
+        }
+        .logo{
+        color:white;
+        display:flex;
+        justify-content:center;
+        background-color:white;
+        }
+        h6{
+        display:flex;
+        justify-content:center;
+        margin:0px
+        }
+        .nama{
+        margin-top:16px;
+        }
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh; /* 100% tinggi dari viewport, sesuaikan sesuai kebutuhan */
+    background-color: #806680;
+    margin-top: 10px;
+}
+.center-text {
+    text-align: center;
+}
+
